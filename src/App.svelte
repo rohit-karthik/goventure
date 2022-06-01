@@ -1,30 +1,46 @@
-<script>
-	export let name;
-</script>
-
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div class="header">
+	<p class="heading">
+		GoVenture
+	</p>
+	<p class="info">
+		GoVenture is a tool that can help you find the best prices for your next vacation.
+		Whether you're looking for rental car deals, or the best possible price for your next flight,
+		GoVenture has you covered.
+	</p>
+	<div class="search">
+		<input class="padding" style="width: 250px" placeholder="Search for your destination:"/>
+		<button class="padding btn btn-primary">Search</button>
+	</div>
+</div>
 
 <style>
-	main {
+	.search {
+		display: flex;
+	}
+	.padding {
+		padding: 10px;
+		margin: 10px;
+		border-radius: 5px;
+	}
+	.info {
 		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		max-width: 75rem;
+		font-size: 1.25rem;
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	.heading {
+		font-weight: bold;
+		font-size: 5rem;
+		margin: 0;
 	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: full;
+		height: 75vh;
+		background-color: darkslateblue;
+		border-radius: 0 0 50px 50px;
+		color: white;
 	}
 </style>
